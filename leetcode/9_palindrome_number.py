@@ -5,7 +5,7 @@ def is_palindrome(x: int) -> bool:
 
 
 def is_palindrome_non_str(x: int) -> bool:
-    initial = x
+    initial = abs(x)
     res = 0
     y = 0
     while x > 0:
@@ -18,3 +18,4 @@ def is_palindrome_non_str(x: int) -> bool:
 if __name__ == '__main__':
     assert True is is_palindrome(24566542)
     assert True is is_palindrome_non_str(24566542)
+    assert False is is_palindrome_non_str(-24566542)
